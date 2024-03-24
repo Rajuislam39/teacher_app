@@ -1,12 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:teacher_app/splash_screen.dart';
 
+import 'features/views/home_page/home_page.dart';
 
 void main(){
-  runApp(kkk());
+  return runApp(const MyApp());
 }
-MaterialApp kkk(){
-  return const MaterialApp(
-    home: SplashScreen(),
-  );
+
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: HomePage(),
+    );
+  }
 }

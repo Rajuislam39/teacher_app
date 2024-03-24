@@ -8,11 +8,9 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  bool valuefirst = false;
-  var _passwordVisible;
-  void initState() {
-    _passwordVisible = true;
-  }
+  bool valueF = false;
+  var _passwordVisible=false;
+
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +22,7 @@ class _LoginScreenState extends State<LoginScreen> {
         child:
         Container(
           width: w/1.20,height:h/1.50,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
           borderRadius: BorderRadius.only(
             topRight: Radius.circular(150),
             // topLeft: Radius.circular(10.0),
@@ -36,11 +34,11 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(height: 10,),
-                Center(child: Text("Welcome",style: TextStyle(color: Colors.white,fontSize:30,fontWeight: FontWeight.bold),)),
-                SizedBox(height: 10,),
-                Text("ID No.",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
-                TextField(
+                const SizedBox(height: 10,),
+                const Center(child: Text("Welcome",style: TextStyle(color: Colors.white,fontSize:30,fontWeight: FontWeight.bold),)),
+                const SizedBox(height: 10,),
+                const Text("ID No.",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
+                const TextField(
                   cursorColor: Colors.white,
                   style: TextStyle(color: Colors.white,fontSize: 20),
                   decoration: InputDecoration(
@@ -55,10 +53,10 @@ class _LoginScreenState extends State<LoginScreen> {
                     )
                   ),
                 ),
-                SizedBox(height: 20,),
-                Text("Password",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
+                const SizedBox(height: 20,),
+                const Text("Password",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
                 TextField(
-                  style: TextStyle(color: Colors.white,fontSize: 20),
+                  style: const TextStyle(color: Colors.white,fontSize: 20),
                   obscureText: _passwordVisible,
                   obscuringCharacter: "*",
                   cursorColor: Colors.white,
@@ -80,16 +78,16 @@ class _LoginScreenState extends State<LoginScreen> {
                     },),
                     // hintText: "ID No.",
                     // hintStyle: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
-                      enabledBorder: OutlineInputBorder(
+                      enabledBorder: const OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.white,width: 2)
 
                       ),
-                      focusedBorder: OutlineInputBorder(
+                      focusedBorder: const OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.white,width: 2)
                       )
                   ),
                 ),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -99,34 +97,34 @@ class _LoginScreenState extends State<LoginScreen> {
           checkColor: Colors.white,
                         focusColor: Colors.white,
         // hoverColor: Colors.white,
-        value: valuefirst,
+        value: valueF,
         onChanged: (bool? value) {
         setState(() {
-        valuefirst = value!;
+        valueF = value!;
         });}),
-        Text("Remember me",style: TextStyle(color: Colors.white),),
+        const Text("Remember me",style: TextStyle(color: Colors.white),),
       ],
     ),
 
 
-                    Text("Forgot Password",style: TextStyle(color: Colors.white),),
+                    const Text("Forgot Password",style: TextStyle(color: Colors.white),),
 
                   ],
                 ),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                 Center(
                   child: InkWell(
                     onTap: (){},
-                      child: SizedBox(height: 50,width: 100,child: Center(child: Card(color: Colors.white,child: Center(child: Text("Login")),)),)),
+                      child: const SizedBox(height: 50,width: 100,child: Center(child: Card(color: Colors.white,child: Center(child: Text("Login")),)),)),
                 ),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("Don't have an account?",style: TextStyle(color: Colors.white),),
+                    const Text("Don't have an account? ",style: TextStyle(color: Colors.white),),
                     GestureDetector(
                         onTap: (){},
-                        child: Text("Signin Up",style: TextStyle(color: Colors.white,fontSize:18,fontWeight: FontWeight.bold),)),
+                        child: const Text("Create account",style: TextStyle(color: Colors.white,fontSize:18,fontWeight: FontWeight.bold),)),
 
                   ],
                 ),

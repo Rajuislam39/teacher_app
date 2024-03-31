@@ -100,7 +100,7 @@ class _SingInScreenState extends State<SingInScreen> {
                                 color: Colors.white,
                               ),
                               onPressed: () {
-                                // Update the state i.e. toogle the state of passwordVisible variable
+                                // Update the state i.e.toogle the state of passwordVisible variable
                                 setState(() {
                                   _passwordVisible = !_passwordVisible;
                                 });

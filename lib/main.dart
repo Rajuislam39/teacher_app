@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'features/views/home_page/home_page.dart';
+import 'features/screen/dash_board/dashboard.dart';
 
 void main(){
   return runApp(const MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: DashBoard(),
     );
   }
 }
